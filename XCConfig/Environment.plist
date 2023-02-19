@@ -5,6 +5,6 @@
 	<key>url</key>
 	<string>${ROOT}</string>
 	<key>scheme</key>
-	<string>develop</string>
+	<string>product</string>
 </dict>
 </plist>
