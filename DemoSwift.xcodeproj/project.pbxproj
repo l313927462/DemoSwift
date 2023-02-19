@@ -466,7 +466,7 @@
 		};
 		F9219C6E29A11C9A0040A3D5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -479,7 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nroot=${SRCROOT}\necho \"根目录为：$root\"\necho \"根目录为：${SRCROOT}\"\n\nfileName=\"Environment.plist\"\ndesPath=\"${SRCROOT}/XCConfig\"\necho \"目标路径:$desPath\"\necho \"当前环境:$CONFIGURATION\"\nenv=\"Develop\"\n\n\nShowing All Messages\n当前环境:\n\n\n\nif [ $CONFIGURATION == Develop_Debug ] || [ $CONFIGURATION == Develop_Release ]; then\nenv=\"Develop\"\nelse \nenv=\"Product\"\nfi\n\n\n\necho \"当前环境配置为： $env\"\nresPath=\"${SRCROOT}/Environment/$env/$fileName\"\necho \"源文件路径: $resPath\"\ncp $resPath $desPath\n \n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nroot=${SRCROOT}\necho \"根目录为：$root\"\necho \"根目录为：${SRCROOT}\"\n\nfileName=\"Environment.plist\"\ndesPath=\"${SRCROOT}/XCConfig\"\necho \"目标路径:$desPath\"\necho \"当前环境:$CONFIGURATION\"\nenv=\"Develop\"\n\nif [ $CONFIGURATION == Develop_Debug ] || [ $CONFIGURATION == Develop_Release ]; then\nenv=\"Develop\"\nelse \nenv=\"Product\"\nfi\n\necho \"当前环境配置为： $env\"\nresPath=\"${SRCROOT}/Environment/$env/$fileName\"\necho \"源文件路径: $resPath\"\ncp $resPath $desPath\n \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
